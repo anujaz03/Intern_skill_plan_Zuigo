@@ -7,46 +7,9 @@ For each idea include:
 - Primary users
 - Main problem solved
 
-OUTPUT
 
-10 AI-Powered CRM Ideas for Small Businesses
-
-LeadFlow AI — A CRM that centralizes customer info and reminds businesses to follow up on time. Primary users: small businesses, startups, sales executives. Problem solved: missed follow-ups due to scattered tracking across Excel/WhatsApp/notebooks.
-QuoteTrack — A CRM focused on tracking quotations sent to customers and nudging follow-ups until a quote is accepted or rejected. Primary users: contractors, freelancers, B2B service providers. Problem solved: quotes sent and forgotten, with no visibility into pending decisions.
----
-RepeatBuyer — A CRM built around identifying and re-engaging past customers likely to purchase again. Primary users: retail shops, salons, small e-commerce sellers. Problem solved: businesses focus only on new leads and lose repeat revenue from existing customers.
----
-CallLog AI — A CRM that auto-transcribes and summarizes phone calls with customers into structured notes. Primary users: sales teams, real estate agents, insurance agents. Problem solved: important details from calls are forgotten or never written down.
-WhatsBiz CRM — A CRM that organizes and tracks customer conversations happening over WhatsApp Business. Primary users: small retailers, local service businesses. Problem solved: customer history buried in WhatsApp chats with no structure or search.
----
-PipelineSnap — A visual, drag-and-drop lead pipeline CRM with AI-suggested next actions at each stage. Primary users: early-stage startups, small sales teams. Problem solved: no clear view of where each lead stands in the sales process.
-ReviewFollow — A CRM that tracks completed jobs/orders and automates asking customers for reviews or feedback. Primary users: home services, freelancers, small agencies. Problem solved: businesses forget to request reviews, hurting reputation and referrals.
----
-TeamTrack CRM — A CRM that shows business owners a live view of which team member is handling which customer and follow-up status. Primary users: small business owners managing 2–10 sales staff. Problem solved: owners lack visibility into team follow-up activity and accountability.
----
-InvoiceRemind — A CRM-lite tool combining customer tracking with payment/invoice follow-up reminders. Primary users: freelancers, small service businesses, consultants. Problem solved: pending payments are forgotten alongside customer follow-ups.
----
-EventLeads AI — A CRM built for capturing and following up with leads collected at trade shows, exhibitions, or local events. Primary users: startups, exhibitors, B2B sales teams. Problem solved: leads collected at events (business cards, forms) are rarely followed up on afterward.
 
 -------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ###-------------PROMPT FOR CREATING A PROJECT BRIEF USING CLAUDE -------------------------------------------####
 
 You are an experienced Product Manager and Startup Consultant helping an AI Engineering Intern prepare a Day 3 internship deliverable.
