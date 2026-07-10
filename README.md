@@ -11,3 +11,4 @@ This repository contains my 14-day AI Engineering Internship learning progress a
 
 - Revised python fundamentals
 - Solved hackerrank questions for better understanding.
+- Gave a good prompt and a bad prompt to gpt to see what is the major difference in the output.
