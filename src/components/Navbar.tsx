@@ -39,7 +39,7 @@ export function Navbar() {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-3">
-            <Link href="/register">
+            <Link href="/login">
               <Button variant="outline" className="border-slate-200 text-slate-700 hover:bg-slate-50">
                 Log in
               </Button>
@@ -98,7 +98,7 @@ export function Navbar() {
             </a>
             <hr className="border-slate-100" />
             <div className="flex flex-col gap-2">
-              <Link href="/register" className="w-full">
+              <Link href="/login" className="w-full">
                 <Button variant="outline" className="w-full justify-center">
                   Log in
                 </Button>

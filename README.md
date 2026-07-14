@@ -128,7 +128,7 @@ Prepare client-facing documents based on the PRD and communicate the product in 
 - Figma
 - Markdown
 
----
+-
 
 ## Project
 

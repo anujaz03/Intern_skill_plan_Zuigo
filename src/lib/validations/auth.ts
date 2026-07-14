@@ -46,3 +46,20 @@ export const registerSchema = z
 
 // Use z.input to extract the form input type for React Hook Form
 export type RegisterInput = z.input<typeof registerSchema>;
+
+// Zod schema for client-side login form validation
+export const loginSchema = z.object({
+  email: z
+    .string()
+    .min(1, "Email is required.")
+    .email("Please enter a valid email.")
+    .trim(),
+  password: z
+    .string()
+    .min(1, "Password is required.")
+    .min(8, "Password must be at least 8 characters."),
+  rememberMe: z.boolean().optional(),
+});
+
+export type LoginInput = z.infer<typeof loginSchema>;
+

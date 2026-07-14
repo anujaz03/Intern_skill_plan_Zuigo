@@ -89,7 +89,7 @@ export default function RegisterPage() {
             </Link>
             <div className="text-sm font-medium text-[#475569]">
               Already have an account?{" "}
-              <Link href="#" className="font-semibold text-blue-600 hover:text-blue-700 inline-flex items-center gap-0.5">
+              <Link href="/login" className="font-semibold text-blue-600 hover:text-blue-700 inline-flex items-center gap-0.5">
                 Log in <ArrowRight className="h-3 w-3" />
               </Link>
             </div>
@@ -392,7 +392,7 @@ export default function RegisterPage() {
                 {/* Alt Login Footer */}
                 <div className="mt-8 text-center text-xs text-slate-500">
                   Already have an account?{" "}
-                  <Link href="#" className="font-semibold text-blue-600 hover:text-blue-700">
+                  <Link href="/login" className="font-semibold text-blue-600 hover:text-blue-700">
                     Log in
                   </Link>
                 </div>
