@@ -33,6 +33,7 @@ export function TopNavbar({ workspaceName = "Acme Corp Workspace", onOpenSidebar
           <input
             type="text"
             placeholder="Search workspace..."
+            suppressHydrationWarning
             className="w-full pl-9 pr-4 py-2 border border-slate-200 rounded-lg text-xs placeholder-slate-400 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
           />
         </div>
