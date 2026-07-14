@@ -29,11 +29,13 @@ export default function RegisterPage() {
     formState: { errors },
   } = useForm<RegisterInput>({
     resolver: zodResolver(registerSchema),
+    mode: "onChange",
+    reValidateMode: "onChange",
     defaultValues: {
       companyName: "",
       fullName: "",
       email: "",
-      phoneNumber: "",
+      phone: "",
       password: "",
       confirmPassword: "",
       businessType: "",
@@ -232,11 +234,15 @@ export default function RegisterPage() {
                   <InputField
                     label="Phone Number"
                     type="tel"
+                    name="phone"
+                    id="phone"
+                    autoComplete="tel"
+                    inputMode="numeric"
                     placeholder="+1 (555) 000-0000"
                     hint="Used for account recovery only"
                     optional
-                    error={errors.phoneNumber?.message}
-                    registration={register("phoneNumber")}
+                    error={errors.phone?.message}
+                    registration={register("phone")}
                     disabled={isLoading}
                   />
 

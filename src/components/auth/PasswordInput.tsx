@@ -31,6 +31,7 @@ export const PasswordInput = React.forwardRef<HTMLInputElement, PasswordInputPro
               error && "border-red-500 focus:border-red-500 focus:ring-red-500",
               className
             )}
+            {...registration}
             ref={(e) => {
               registration.ref(e);
               if (typeof ref === "function") {
