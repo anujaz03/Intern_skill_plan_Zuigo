@@ -1,3 +1,22 @@
+### Good prompt for generating a Python Employee Management System using OOP, functions, comments, input validation, and PEP8 standards.
+
+# Generate a Python Employee Management System.
+
+# Requirements
+
+# - Use OOP
+# - Use functions
+# - Add comments
+# - Handle invalid input
+# - Follow PEP8
+# - Explain time complexity
+
+
+
+
+
+
+
 """
 Employee Management System
 --------------------------
