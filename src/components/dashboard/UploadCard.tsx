@@ -68,7 +68,7 @@ export function UploadCard({ onUploadSuccess }: UploadCardProps) {
     e.stopPropagation();
     setDragActive(false);
 
-    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+    if (e.dataTransfer?.files && e.dataTransfer.files[0]) {
       validateAndUpload(e.dataTransfer.files[0]);
     }
   };
