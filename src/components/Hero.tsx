@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { Zap, Upload, Sparkles, CheckCircle2, FileSpreadsheet } from "lucide-react";
 import { Container } from "./ui/container";
 import { Button } from "./ui/button";
@@ -30,9 +31,11 @@ export function Hero() {
 
             {/* Call to Actions */}
             <div className="mt-8 flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-              <Button variant="navy" size="lg" className="px-7 py-6 text-sm font-semibold shadow-md shadow-slate-900/10">
-                Create free account
-              </Button>
+              <Link href="/register" className="w-full sm:w-auto">
+                <Button variant="navy" size="lg" className="w-full px-7 py-6 text-sm font-semibold shadow-md shadow-slate-900/10">
+                  Create free account
+                </Button>
+              </Link>
               <Button variant="outline" size="lg" className="px-7 py-6 text-sm font-semibold border-slate-200 text-slate-700 bg-white hover:bg-slate-50">
                 See how it works
               </Button>

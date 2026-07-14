@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { Menu, X, Zap } from "lucide-react";
 import { Container } from "./ui/container";
 import { Button } from "./ui/button";
@@ -38,12 +39,16 @@ export function Navbar() {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="outline" className="border-slate-200 text-slate-700 hover:bg-slate-50">
-              Log in
-            </Button>
-            <Button variant="navy">
-              Get started
-            </Button>
+            <Link href="/register">
+              <Button variant="outline" className="border-slate-200 text-slate-700 hover:bg-slate-50">
+                Log in
+              </Button>
+            </Link>
+            <Link href="/register">
+              <Button variant="navy">
+                Get started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -93,12 +98,16 @@ export function Navbar() {
             </a>
             <hr className="border-slate-100" />
             <div className="flex flex-col gap-2">
-              <Button variant="outline" className="w-full justify-center">
-                Log in
-              </Button>
-              <Button variant="navy" className="w-full justify-center">
-                Get started
-              </Button>
+              <Link href="/register" className="w-full">
+                <Button variant="outline" className="w-full justify-center">
+                  Log in
+                </Button>
+              </Link>
+              <Link href="/register" className="w-full">
+                <Button variant="navy" className="w-full justify-center">
+                  Get started
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

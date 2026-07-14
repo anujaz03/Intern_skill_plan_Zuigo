@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from "next/link";
 import { Sparkles } from "lucide-react";
 import { Container } from "./ui/container";
 import { Button } from "./ui/button";
@@ -25,9 +26,11 @@ export function CTASection() {
           </div>
 
           <div className="relative z-10 mt-8 flex flex-col sm:flex-row justify-center lg:justify-end gap-3 w-full sm:w-auto shrink-0">
-            <Button variant="default" size="lg" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white py-6">
-              Create free account
-            </Button>
+            <Link href="/register" className="w-full sm:w-auto">
+              <Button variant="default" size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6">
+                Create free account
+              </Button>
+            </Link>
             <Button variant="outline" size="lg" className="w-full sm:w-auto bg-transparent border-slate-700 text-white hover:bg-slate-800 hover:border-slate-600 py-6">
               See how it works
             </Button>
