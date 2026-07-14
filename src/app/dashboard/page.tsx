@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useRouter } from "next/navigation";
 import {
   Sparkles,
   Download,
@@ -24,6 +25,7 @@ import { ChecklistCard } from "@/components/dashboard/ChecklistCard";
 import { Button } from "@/components/ui/button";
 
 export default function DashboardPage() {
+  const router = useRouter();
   // Mobile sidebar visibility toggle state
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
@@ -31,12 +33,14 @@ export default function DashboardPage() {
   const [uploadState, setUploadState] = React.useState<"idle" | "uploading" | "processing" | "success">("idle");
   const [uploadedFileName, setUploadedFileName] = React.useState<string | null>(null);
 
-  const handleUploadSuccess = (fileName: string) => {
-    setUploadedFileName(fileName);
-    setUploadState("success");
-  };
-
-  // handleUploadStart is ready for future custom upload integrations
+  React.useEffect(() => {
+    // Check if data was successfully imported via wizard
+    const imported = typeof window !== "undefined" ? (window as typeof window & { __leadflowImportedData?: Record<string, unknown>[] }).__leadflowImportedData : null;
+    if (imported && Array.isArray(imported) && imported.length > 0) {
+      setUploadState("success");
+      setUploadedFileName("Imported Spreadsheet");
+    }
+  }, []);
 
   const isWorkspaceActive = uploadState === "success";
 
@@ -189,9 +193,8 @@ export default function DashboardPage() {
               </div>
               <div className="flex flex-col gap-2 shrink-0 sm:max-w-[200px] w-full">
                 <Button
-                  onClick={() => document.getElementById("dashboard-file-upload")?.click()}
+                  onClick={() => router.push("/import")}
                   variant="navy"
-                  disabled={uploadState !== "idle"}
                   className="w-full justify-center text-xs font-semibold py-5"
                 >
                   <Upload className="h-4 w-4" /> Upload Excel / CSV
@@ -212,10 +215,12 @@ export default function DashboardPage() {
               </div>
             </div>
 
-            {/* Interactive Upload Card component */}
-            <UploadCard
-              onUploadSuccess={handleUploadSuccess}
-            />
+            {/* Interactive Upload Card component (redirects to import wizard) */}
+            <div onClick={() => router.push("/import")} className="cursor-pointer">
+              <UploadCard
+                onUploadSuccess={() => router.push("/import")}
+              />
+            </div>
 
             {/* Widgets Dashboard Grid Area */}
             <div>
@@ -318,17 +323,15 @@ export default function DashboardPage() {
               </h3>
               <div className="flex flex-col gap-2">
                 <Button
-                  onClick={() => document.getElementById("dashboard-file-upload")?.click()}
+                  onClick={() => router.push("/import")}
                   variant="outline"
-                  disabled={uploadState !== "idle"}
                   className="w-full justify-start text-xs font-semibold py-5 border-slate-200 text-slate-700 bg-white hover:bg-slate-50"
                 >
                   <Upload className="h-4 w-4 text-blue-600" /> Upload Excel
                 </Button>
                 <Button
-                  onClick={() => document.getElementById("dashboard-file-upload")?.click()}
+                  onClick={() => router.push("/import")}
                   variant="outline"
-                  disabled={uploadState !== "idle"}
                   className="w-full justify-start text-xs font-semibold py-5 border-slate-200 text-slate-700 bg-white hover:bg-slate-50"
                 >
                   <FileSpreadsheet className="h-4 w-4 text-blue-600" /> Import CSV
