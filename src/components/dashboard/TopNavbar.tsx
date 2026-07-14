@@ -15,6 +15,7 @@ export function TopNavbar({ workspaceName = "Acme Corp Workspace", onOpenSidebar
       <div className="flex items-center gap-4">
         <button
           onClick={onOpenSidebar}
+          suppressHydrationWarning
           className="h-9 w-9 flex items-center justify-center rounded-lg border border-slate-200 text-[#475569] hover:bg-slate-50 lg:hidden transition-colors"
           aria-label="Open Sidebar"
         >
@@ -41,6 +42,7 @@ export function TopNavbar({ workspaceName = "Acme Corp Workspace", onOpenSidebar
         {/* Action icons */}
         <div className="flex items-center gap-2">
           <button
+            suppressHydrationWarning
             className="h-8 w-8 flex items-center justify-center rounded-lg text-[#475569] hover:bg-slate-50 transition-colors relative"
             title="Notifications"
           >
@@ -48,6 +50,7 @@ export function TopNavbar({ workspaceName = "Acme Corp Workspace", onOpenSidebar
             <span className="absolute top-1 right-1 h-1.5 w-1.5 rounded-full bg-blue-600" />
           </button>
           <button
+            suppressHydrationWarning
             className="h-8 w-8 flex items-center justify-center rounded-lg text-[#475569] hover:bg-slate-50 transition-colors"
             title="Help"
           >
@@ -56,7 +59,10 @@ export function TopNavbar({ workspaceName = "Acme Corp Workspace", onOpenSidebar
         </div>
 
         {/* User profile avatar info */}
-        <div className="flex items-center justify-center h-8 w-8 rounded-full border border-slate-200 bg-slate-50 text-[#475569]">
+        <div
+          suppressHydrationWarning
+          className="flex items-center justify-center h-8 w-8 rounded-full border border-slate-200 bg-slate-50 text-[#475569]"
+        >
           <User className="h-4 w-4" />
         </div>
       </div>
